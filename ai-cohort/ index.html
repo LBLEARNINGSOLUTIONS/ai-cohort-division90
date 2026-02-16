@@ -12,17 +12,11 @@
 --grad-start:#3b82f6;--grad-end:#10b981;
 --text:#e2e8f0;--text-dim:#94a3b8;--white:#ffffff;
 }
-html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--text);overflow-x:hidden}
+html{scroll-behavior:smooth}
 a{text-decoration:none;color:inherit}
-
-/* Gradient text utility */
 .grad-text{background:linear-gradient(135deg,var(--grad-start),var(--grad-end));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-
-/* Animated gradient line */
 .grad-line{height:3px;width:80px;background:linear-gradient(90deg,var(--grad-start),var(--grad-end));border-radius:4px;margin:0 auto 1.5rem}
-
-/* Hero */
 .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 40%,rgba(59,130,246,.12) 0%,transparent 50%),radial-gradient(circle at 70% 60%,rgba(16,185,129,.1) 0%,transparent 50%);animation:drift 15s ease-in-out infinite alternate}
 @keyframes drift{0%{transform:translate(0,0)}100%{transform:translate(-3%,2%)}}
@@ -39,15 +33,11 @@ a{text-decoration:none;color:inherit}
 .scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);animation:bounce 2s infinite}
 @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
 .scroll-hint svg{width:24px;height:24px;stroke:var(--text-dim)}
-
-/* Sections */
 section{padding:5rem 2rem}
 .container{max-width:1100px;margin:0 auto}
 .section-label{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;text-align:center;margin-bottom:.75rem}
 .section-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;text-align:center;color:var(--white);margin-bottom:1rem}
 .section-sub{text-align:center;color:var(--text-dim);max-width:600px;margin:0 auto 3rem;line-height:1.7;font-size:1.05rem}
-
-/* Problem section */
 .problem{background:var(--darker)}
 .problem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem}
 .problem-card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:2rem;transition:all .3s ease;position:relative;overflow:hidden}
@@ -57,15 +47,11 @@ section{padding:5rem 2rem}
 .problem-icon{font-size:1.8rem;margin-bottom:1rem}
 .problem-card h3{font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:.5rem}
 .problem-card p{color:var(--text-dim);font-size:.95rem;line-height:1.6}
-
-/* What you'll learn */
 .learn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
 .learn-item{display:flex;gap:1.25rem;align-items:flex-start}
 .learn-num{min-width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(59,130,246,.15),rgba(16,185,129,.15));border:1px solid rgba(59,130,246,.25);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem}
 .learn-item h3{font-weight:700;color:var(--white);margin-bottom:.35rem;font-size:1.05rem}
 .learn-item p{color:var(--text-dim);font-size:.9rem;line-height:1.6}
-
-/* Schedule */
 .schedule{background:var(--darker)}
 .timeline{max-width:700px;margin:0 auto;position:relative}
 .timeline::before{content:'';position:absolute;left:23px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--grad-start),var(--grad-end))}
@@ -75,22 +61,16 @@ section{padding:5rem 2rem}
 .timeline-content h3{font-weight:700;color:var(--white);margin-bottom:.25rem}
 .timeline-content .date{font-size:.85rem;color:var(--grad-end);margin-bottom:.5rem;font-weight:500}
 .timeline-content p{color:var(--text-dim);font-size:.9rem;line-height:1.6}
-
-/* Who it's for */
 .audience-list{max-width:650px;margin:0 auto;display:flex;flex-direction:column;gap:1rem}
 .audience-item{display:flex;align-items:center;gap:1rem;background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:1.25rem 1.5rem;transition:all .3s ease}
 .audience-item:hover{border-color:var(--grad-start)}
 .check{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,rgba(59,130,246,.2),rgba(16,185,129,.2));display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .check svg{width:14px;height:14px;stroke:var(--grad-end);stroke-width:3}
 .audience-item p{color:var(--text);font-size:1rem}
-
-/* Sponsor */
 .sponsor{text-align:center}
-.sponsor-card{background:var(--card);border:1px solid var(--card-border);border-radius:20px;padding:3rem;max-width:700px;margin:0 auto}
+.sponsor-card{background:var(--card);border:1px solid var(--card-border);border-radius:20px;padding:3rem}
 .sponsor-card p{color:var(--text-dim);line-height:1.8;font-size:1.05rem;margin-bottom:1.5rem}
 .sponsor-logo{font-size:1.4rem;font-weight:800;letter-spacing:1px;margin-bottom:1rem}
-
-/* CTA */
 .cta{text-align:center;padding:6rem 2rem;position:relative}
 .cta::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(59,130,246,.08) 0%,transparent 70%)}
 .cta-content{position:relative;z-index:2}
@@ -99,257 +79,247 @@ section{padding:5rem 2rem}
 .cta .details{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
 .cta .detail-item{display:flex;align-items:center;gap:.5rem;color:var(--text-dim);font-size:.95rem}
 .cta .detail-item svg{width:18px;height:18px;stroke:var(--grad-end)}
-
-/* Footer */
 footer{text-align:center;padding:2rem;border-top:1px solid var(--card-border);color:var(--text-dim);font-size:.85rem}
-
 @media(max-width:600px){
-  .hero h1{font-size:2.2rem}
-  .btn-outline{margin-left:0}
-  section{padding:3.5rem 1.25rem}
-  .cta .details{flex-direction:column;align-items:center}
+.hero h1{font-size:2.2rem}
+.btn-outline{margin-left:0}
+section{padding:3.5rem 1.25rem}
+.cta .details{flex-direction:column;align-items:center}
 }
 </style>
 </head>
 <body>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
-    <div class="hero-badge">Free 6-Session AI Cohort</div>
-    <h1>AI Is Changing Business.<br><span class="grad-text">Let's Learn It Together.</span></h1>
-    <p>A free, hands-on AI cohort built for business owners who want to work smarter, make better decisions, and stay ahead — no tech background required.</p>
-    <div style="display:flex;align-items:center;justify-content:center;gap:1.5rem;margin-bottom:2rem;flex-wrap:wrap">
-      <span style="font-size:.8rem;letter-spacing:1px;text-transform:uppercase;color:var(--text-dim)">Sponsored by</span>
-      <span style="font-weight:800;font-size:1.1rem;letter-spacing:1px" class="grad-text">DIVISION90</span>
-      <span style="color:var(--text-dim);font-size:1.2rem">×</span>
-      <span style="font-weight:800;font-size:1.1rem;letter-spacing:1px" class="grad-text">L&B LEARNING SOLUTIONS</span>
-    </div>
-    <div class="hero-buttons">
-      <a href="https://forms.gle/auQLW9BeMyiTj9Yr8" target="_blank" class="btn btn-primary">Reserve Your Spot</a>
-      <button onclick="document.getElementById('learn').scrollIntoView({behavior:'smooth'})" class="btn btn-outline">See What You'll Learn</button>
-    </div>
-  </div>
-  <div class="scroll-hint">
-    <svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-  </div>
+<div class="hero-content">
+<div class="hero-badge">Free 6-Session AI Cohort</div>
+<h1>AI Is Changing Business.<br><span class="grad-text">Let's Learn It Together.</span></h1>
+<p>A free, hands-on AI cohort built for business owners who want to work smarter, make better decisions, and stay ahead — no tech background required.</p>
+<div style="display:flex;align-items:center;justify-content:center;gap:1.5rem;margin-bottom:2rem;flex-wrap:wrap">
+<span style="font-size:.8rem;letter-spacing:1px;text-transform:uppercase;color:var(--text-dim)">Sponsored by</span>
+<span style="font-weight:800;font-size:1.1rem;letter-spacing:1px" class="grad-text">DIVISION90</span>
+<span style="color:var(--text-dim);font-size:1.2rem">&times;</span>
+<span style="font-weight:800;font-size:1.1rem;letter-spacing:1px" class="grad-text">L&amp;B LEARNING SOLUTIONS</span>
+</div>
+<div class="hero-buttons">
+<a href="https://forms.gle/auQLW9BeMyiTj9Yr8" target="_blank" class="btn btn-primary">Reserve Your Spot</a>
+<button onclick="document.getElementById('learn').scrollIntoView({behavior:'smooth'})" class="btn btn-outline">See What You'll Learn</button>
+</div>
+</div>
+<div class="scroll-hint">
+<svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+</div>
 </section>
 
-<!-- PROBLEM -->
 <section class="problem">
-  <div class="container">
-    <p class="section-label grad-text">Sound Familiar?</p>
-    <h2 class="section-title">AI is everywhere — but where do you start?</h2>
-    <div class="problem-grid">
-      <div class="problem-card">
-        <div class="problem-icon">🤯</div>
-        <h3>Information Overload</h3>
-        <p>New AI tools launch every day. It's impossible to know what's worth your time and what's just hype.</p>
-      </div>
-      <div class="problem-card">
-        <div class="problem-icon">⏳</div>
-        <h3>No Time to Figure It Out</h3>
-        <p>You're busy running a business. Who has hours to watch tutorials and experiment alone?</p>
-      </div>
-      <div class="problem-card">
-        <div class="problem-icon">😶‍🌫️</div>
-        <h3>Fear of Falling Behind</h3>
-        <p>Your competitors are already using AI. Every week you wait, the gap grows wider.</p>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<p class="section-label grad-text">Sound Familiar?</p>
+<h2 class="section-title">AI is everywhere — but where do you start?</h2>
+<div class="problem-grid">
+<div class="problem-card">
+<div class="problem-icon">&#129327;</div>
+<h3>Information Overload</h3>
+<p>New AI tools launch every day. It's impossible to know what's worth your time and what's just hype.</p>
+</div>
+<div class="problem-card">
+<div class="problem-icon">&#9203;</div>
+<h3>No Time to Figure It Out</h3>
+<p>You're busy running a business. Who has hours to watch tutorials and experiment alone?</p>
+</div>
+<div class="problem-card">
+<div class="problem-icon">&#128566;&#8205;&#127787;&#65039;</div>
+<h3>Fear of Falling Behind</h3>
+<p>Your competitors are already using AI. Every week you wait, the gap grows wider.</p>
+</div>
+</div>
+</div>
 </section>
 
-<!-- WHAT YOU'LL LEARN -->
 <section id="learn">
-  <div class="container">
-    <p class="section-label grad-text">The Cohort</p>
-    <h2 class="section-title">What You'll Walk Away With</h2>
-    <div class="grad-line"></div>
-    <p class="section-sub">This isn't a one-time lecture. Over 6 sessions, you'll build real AI skills alongside other business owners — with time to practice, ask questions, and apply what you learn.</p>
-    <div class="learn-grid">
-      <div class="learn-item">
-        <div class="learn-num grad-text">01</div>
-        <div>
-          <h3>AI Foundations That Actually Make Sense</h3>
-          <p>Cut through the jargon. Understand what AI is, what it can do, and where it fits in your business.</p>
-        </div>
-      </div>
-      <div class="learn-item">
-        <div class="learn-num grad-text">02</div>
-        <div>
-          <h3>Hands-On Tool Mastery</h3>
-          <p>Get comfortable using AI tools like ChatGPT, Claude, and more — with real exercises, not just demos.</p>
-        </div>
-      </div>
-      <div class="learn-item">
-        <div class="learn-num grad-text">03</div>
-        <div>
-          <h3>Time-Saving Workflows</h3>
-          <p>Discover how to automate repetitive tasks, draft content, analyze data, and streamline operations.</p>
-        </div>
-      </div>
-      <div class="learn-item">
-        <div class="learn-num grad-text">04</div>
-        <div>
-          <h3>Smarter Business Decisions</h3>
-          <p>Learn how AI can help you understand your data, spot trends, and make more confident decisions.</p>
-        </div>
-      </div>
-      <div class="learn-item">
-        <div class="learn-num grad-text">05</div>
-        <div>
-          <h3>AI for Marketing & Growth</h3>
-          <p>Use AI to improve your marketing, customer outreach, content creation, and competitive strategy.</p>
-        </div>
-      </div>
-      <div class="learn-item">
-        <div class="learn-num grad-text">06</div>
-        <div>
-          <h3>A Community That Gets It</h3>
-          <p>You'll learn alongside other business owners — share ideas, ask questions, and grow together.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<p class="section-label grad-text">The Cohort</p>
+<h2 class="section-title">What You'll Walk Away With</h2>
+<div class="grad-line"></div>
+<p class="section-sub">This isn't a one-time lecture. Over 6 sessions, you'll build real AI skills alongside other business owners — with time to practice, ask questions, and apply what you learn.</p>
+<div class="learn-grid">
+<div class="learn-item">
+<div class="learn-num grad-text">01</div>
+<div>
+<h3>AI Foundations That Actually Make Sense</h3>
+<p>Cut through the jargon. Understand what AI is, what it can do, and where it fits in your business.</p>
+</div>
+</div>
+<div class="learn-item">
+<div class="learn-num grad-text">02</div>
+<div>
+<h3>Hands-On Tool Mastery</h3>
+<p>Get comfortable using AI tools like ChatGPT, Claude, and more — with real exercises, not just demos.</p>
+</div>
+</div>
+<div class="learn-item">
+<div class="learn-num grad-text">03</div>
+<div>
+<h3>Time-Saving Workflows</h3>
+<p>Discover how to automate repetitive tasks, draft content, analyze data, and streamline operations.</p>
+</div>
+</div>
+<div class="learn-item">
+<div class="learn-num grad-text">04</div>
+<div>
+<h3>Smarter Business Decisions</h3>
+<p>Learn how AI can help you understand your data, spot trends, and make more confident decisions.</p>
+</div>
+</div>
+<div class="learn-item">
+<div class="learn-num grad-text">05</div>
+<div>
+<h3>AI for Marketing & Growth</h3>
+<p>Use AI to improve your marketing, customer outreach, content creation, and competitive strategy.</p>
+</div>
+</div>
+<div class="learn-item">
+<div class="learn-num grad-text">06</div>
+<div>
+<h3>A Community That Gets It</h3>
+<p>You'll learn alongside other business owners — share ideas, ask questions, and grow together.</p>
+</div>
+</div>
+</div>
+</div>
 </section>
 
-<!-- SCHEDULE -->
 <section class="schedule">
-  <div class="container">
-    <p class="section-label grad-text">The Schedule</p>
-    <h2 class="section-title">6 Sessions. Real Skills. Zero Cost.</h2>
-    <div class="grad-line"></div>
-    <p class="section-sub">Each session builds on the last, so you leave with knowledge you can actually use.</p>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-dot grad-text">1</div>
-        <div class="timeline-content">
-          <h3>AI Demystified</h3>
-          <div class="date">📅 February 20th &nbsp;|&nbsp; 💻 Google Meet</div>
-          <p>What AI actually is, what it isn't, and why it matters for your business right now.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot grad-text">2</div>
-        <div class="timeline-content">
-          <h3>Your First AI Toolkit</h3>
-          <div class="date">📅 February 27th &nbsp;|&nbsp; 💻 Google Meet</div>
-          <p>Hands-on with the top AI tools. You'll leave this session already using AI.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot grad-text">3</div>
-        <div class="timeline-content">
-          <h3>AI for Daily Operations</h3>
-          <div class="date">📅 March 6th &nbsp;|&nbsp; 💻 Google Meet</div>
-          <p>Automate the busywork. Emails, scheduling, reporting, and more — handled by AI.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot grad-text">4</div>
-        <div class="timeline-content">
-          <h3>Data-Driven Decisions with AI</h3>
-          <div class="date">📅 March 13th &nbsp;|&nbsp; 💻 Google Meet</div>
-          <p>Use AI to make sense of your numbers and make smarter, faster business decisions.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot grad-text">5</div>
-        <div class="timeline-content">
-          <h3>AI-Powered Marketing & Growth</h3>
-          <div class="date">📅 March 20th &nbsp;|&nbsp; 💻 Google Meet</div>
-          <p>Content creation, customer outreach, SEO — learn how AI supercharges your growth engine.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot grad-text">6</div>
-        <div class="timeline-content">
-          <h3>Your AI Game Plan</h3>
-          <div class="date">📅 March 27th &nbsp;|&nbsp; 💻 Google Meet</div>
-          <p>Build a personalized AI action plan for your business. Leave with a clear roadmap.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<p class="section-label grad-text">The Schedule</p>
+<h2 class="section-title">6 Sessions. Real Skills. Zero Cost.</h2>
+<div class="grad-line"></div>
+<p class="section-sub">Each session builds on the last, so you leave with knowledge you can actually use.</p>
+<div class="timeline">
+<div class="timeline-item">
+<div class="timeline-dot grad-text">1</div>
+<div class="timeline-content">
+<h3>AI Demystified</h3>
+<div class="date">&#128197; February 20th &nbsp;|&nbsp; &#128187; Google Meet</div>
+<p>What AI actually is, what it isn't, and why it matters for your business right now.</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-dot grad-text">2</div>
+<div class="timeline-content">
+<h3>Your First AI Toolkit</h3>
+<div class="date">&#128197; February 27th &nbsp;|&nbsp; &#128187; Google Meet</div>
+<p>Hands-on with the top AI tools. You'll leave this session already using AI.</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-dot grad-text">3</div>
+<div class="timeline-content">
+<h3>AI for Daily Operations</h3>
+<div class="date">&#128197; March 6th &nbsp;|&nbsp; &#128187; Google Meet</div>
+<p>Automate the busywork. Emails, scheduling, reporting, and more — handled by AI.</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-dot grad-text">4</div>
+<div class="timeline-content">
+<h3>Data-Driven Decisions with AI</h3>
+<div class="date">&#128197; March 13th &nbsp;|&nbsp; &#128187; Google Meet</div>
+<p>Use AI to make sense of your numbers and make smarter, faster business decisions.</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-dot grad-text">5</div>
+<div class="timeline-content">
+<h3>AI-Powered Marketing & Growth</h3>
+<div class="date">&#128197; March 20th &nbsp;|&nbsp; &#128187; Google Meet</div>
+<p>Content creation, customer outreach, SEO — learn how AI supercharges your growth engine.</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-dot grad-text">6</div>
+<div class="timeline-content">
+<h3>Your AI Game Plan</h3>
+<div class="date">&#128197; March 27th &nbsp;|&nbsp; &#128187; Google Meet</div>
+<p>Build a personalized AI action plan for your business. Leave with a clear roadmap.</p>
+</div>
+</div>
+</div>
+</div>
 </section>
 
-<!-- WHO IT'S FOR -->
 <section>
-  <div class="container">
-    <p class="section-label grad-text">Is This For You?</p>
-    <h2 class="section-title">This Cohort Is Built For You If...</h2>
-    <div class="grad-line"></div>
-    <div class="audience-list">
-      <div class="audience-item">
-        <div class="check"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
-        <p>You're a business owner who knows AI is important but hasn't found time to learn it</p>
-      </div>
-      <div class="audience-item">
-        <div class="check"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
-        <p>You want practical skills, not theory — something you can use on Monday morning</p>
-      </div>
-      <div class="audience-item">
-        <div class="check"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
-        <p>You'd rather learn in a group than figure it out alone watching YouTube videos</p>
-      </div>
-      <div class="audience-item">
-        <div class="check"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
-        <p>You have zero tech background — and that's perfectly fine</p>
-      </div>
-      <div class="audience-item">
-        <div class="check"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
-        <p>You're tired of watching competitors move faster and want to close the gap</p>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<p class="section-label grad-text">Is This For You?</p>
+<h2 class="section-title">This Cohort Is Built For You If...</h2>
+<div class="grad-line"></div>
+<div class="audience-list">
+<div class="audience-item">
+<div class="check"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+<p>You're a business owner who knows AI is important but hasn't found time to learn it</p>
+</div>
+<div class="audience-item">
+<div class="check"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+<p>You want practical skills, not theory — something you can use on Monday morning</p>
+</div>
+<div class="audience-item">
+<div class="check"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+<p>You'd rather learn in a group than figure it out alone watching YouTube videos</p>
+</div>
+<div class="audience-item">
+<div class="check"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+<p>You have zero tech background — and that's perfectly fine</p>
+</div>
+<div class="audience-item">
+<div class="check"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+<p>You're tired of watching competitors move faster and want to close the gap</p>
+</div>
+</div>
+</div>
 </section>
 
-<!-- SPONSOR -->
 <section class="sponsor" style="background:var(--darker)">
-  <div class="container">
-    <p class="section-label grad-text">Brought To You By</p>
-    <div style="display:flex;gap:2rem;max-width:900px;margin:0 auto;flex-wrap:wrap">
-      <div class="sponsor-card" style="flex:1;min-width:280px">
-        <div class="sponsor-logo grad-text">DIVISION90</div>
-        <p style="font-size:.95rem">Division90 are data-focused growth specialists who help businesses optimize their data, build smart strategies, and execute for growth. They believe AI is the next essential tool in every business owner's toolkit — and they're making this cohort completely free because they're invested in seeing local businesses thrive.</p>
-        <p style="margin-bottom:0;font-size:.95rem"><strong style="color:var(--white)">Data → Strategy → Growth.</strong></p>
-      </div>
-      <div class="sponsor-card" style="flex:1;min-width:280px">
-        <div class="sponsor-logo grad-text">L&B LEARNING SOLUTIONS</div>
-        <p style="font-size:.95rem">L&B Learning Solutions is your instructor for this cohort — bringing hands-on AI expertise and a passion for making complex technology accessible and actionable for business owners at every level.</p>
-        <p style="margin-bottom:0;font-size:.95rem"><strong style="color:var(--white)">Your guides on the AI journey.</strong></p>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<p class="section-label grad-text">Brought To You By</p>
+<div style="display:flex;gap:2rem;max-width:900px;margin:0 auto;flex-wrap:wrap">
+<div class="sponsor-card" style="flex:1;min-width:280px">
+<div class="sponsor-logo grad-text">DIVISION90</div>
+<p style="font-size:.95rem">Division90 are data-focused growth specialists who help businesses optimize their data, build smart strategies, and execute for growth. They believe AI is the next essential tool in every business owner's toolkit — and they're making this cohort completely free because they're invested in seeing local businesses thrive.</p>
+<p style="margin-bottom:0;font-size:.95rem"><strong style="color:var(--white)">Data &rarr; Strategy &rarr; Growth.</strong></p>
+</div>
+<div class="sponsor-card" style="flex:1;min-width:280px">
+<div class="sponsor-logo grad-text">L&amp;B LEARNING SOLUTIONS</div>
+<p style="font-size:.95rem">L&amp;B Learning Solutions is your instructor for this cohort — bringing hands-on AI expertise and a passion for making complex technology accessible and actionable for business owners at every level.</p>
+<p style="margin-bottom:0;font-size:.95rem"><strong style="color:var(--white)">Your guides on the AI journey.</strong></p>
+</div>
+</div>
+</div>
 </section>
 
-<!-- CTA -->
 <section class="cta" id="register">
-  <div class="cta-content">
-    <h2>Ready to <span class="grad-text">Get Started?</span></h2>
-    <p>Spots are limited so we can keep it personal, hands-on, and valuable. Don't wait.</p>
-    <div class="details">
-      <div class="detail-item">
-        <svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-        Feb 20 — Mar 27 &nbsp;|&nbsp; Every Friday
-      </div>
-      <div class="detail-item">
-        <svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        Live on Google Meet
-      </div>
-      <div class="detail-item">
-        <svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        100% Free
-      </div>
-    </div>
-    <a href="https://forms.gle/auQLW9BeMyiTj9Yr8" target="_blank" class="btn btn-primary" style="font-size:1.1rem;padding:1.1rem 3rem">Register Now →</a>
-    <p style="margin-top:1rem;font-size:.85rem;color:var(--text-dim)">You'll be redirected to our registration page</p>
-  </div>
+<div class="cta-content">
+<h2>Ready to <span class="grad-text">Get Started?</span></h2>
+<p>Spots are limited so we can keep it personal, hands-on, and valuable. Don't wait.</p>
+<div class="details">
+<div class="detail-item">
+<svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+Feb 20 — Mar 27 &nbsp;|&nbsp; Every Friday
+</div>
+<div class="detail-item">
+<svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+Live on Google Meet
+</div>
+<div class="detail-item">
+<svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+100% Free
+</div>
+</div>
+<a href="https://forms.gle/auQLW9BeMyiTj9Yr8" target="_blank" class="btn btn-primary" style="font-size:1.1rem;padding:1.1rem 3rem">Register Now &rarr;</a>
+<p style="margin-top:1rem;font-size:.85rem;color:var(--text-dim)">You'll be redirected to our registration page</p>
+</div>
 </section>
 
 <footer>
-  <p>Sponsored by <strong class="grad-text">Division90</strong> &nbsp;×&nbsp; <strong class="grad-text">L&B Learning Solutions</strong> &nbsp;|&nbsp; <a href="https://www.division90.com" style="color:var(--grad-end)">division90.com</a></p>
+<p>Sponsored by <strong class="grad-text">Division90</strong> &nbsp;&times;&nbsp; <strong class="grad-text">L&amp;B Learning Solutions</strong> &nbsp;|&nbsp; <a href="https://www.division90.com" style="color:var(--grad-end)">division90.com</a></p>
 </footer>
 
 </body>
